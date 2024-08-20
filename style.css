@@ -1,44 +1,60 @@
-body {
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-body.dark-mode {
-    background-color: #333;
-    color: #fff;
-}
-
-.container {
-    text-align: center;
-}
-
-h1 {
-    margin-bottom: 20px;
-}
-
-.toggle-container {
-    cursor: pointer;
-}
-
-.sun-icon, .moon-icon {
-    width: 24px;
-    height: 24px;
-    transition: opacity 0.3s;
-}
-
-.moon-icon {
-    display: none;
-}
-
-body.dark-mode .sun-icon {
-    display: none;
-}
-
-body.dark-mode .moon-icon {
-    display: inline-block;
-}
+/* Root selector for defining global CSS variables */
+:root {
+    --clr-dark: #333;  /* Dark color for text in light mode, background in dark mode */
+    --clr-light: #fff; /* Light color for background in light mode, text in dark mode */
+  }
+  
+  /* Base styles for the body */
+  body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: var(--clr-light);
+      color: var(--clr-dark);
+      transition: background-color 0.3s, color 0.3s;
+  }
+  
+  /* Styles for dark mode */
+  .dark-mode { /* Use body.dark-mode if targets at body */
+      background-color: var(--clr-dark);
+      color: var(--clr-light);
+  }
+  
+  /* Container for centering content */
+  .container {
+      text-align: center;
+  }
+  
+  /* Heading styles */
+  h1 {
+      margin-bottom: 20px;
+  }
+  
+  /* Styles for the toggle container */
+  .toggle-container {
+      cursor: pointer;
+  }
+  
+  /* Styles for the sun and moon icons */
+  .sun-icon, .moon-icon {
+      width: 24px;
+      height: 24px;
+      transition: opacity 0.3s;
+  }
+  
+  /* Hide moon icon by default (light mode) */
+  .moon-icon {
+      display: none;
+  }
+  
+  /* Show moon icon and hide sun icon in dark mode */
+  .dark-mode .sun-icon {
+      display: none;
+  }
+  
+  .dark-mode .moon-icon {
+      display: inline-block;
+  }
