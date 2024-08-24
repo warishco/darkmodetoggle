@@ -17,12 +17,6 @@
       transition: background-color 0.3s, color 0.3s;
   }
   
-  /* Styles for dark mode */
-  .dark-mode { /* Use body.dark-mode if targets at body */
-      background-color: var(--clr-dark);
-      color: var(--clr-light);
-  }
-  
   /* Container for centering content */
   .container {
       text-align: center;
@@ -33,6 +27,12 @@
       margin-bottom: 20px;
   }
   
+  /* Styles for dark mode */
+  .dark-mode { /* Use body.dark-mode if targets at body */
+    background-color: var(--clr-dark);
+    color: var(--clr-light);
+}
+
   /* Styles for the toggle container */
   .toggle-container {
       cursor: pointer;
